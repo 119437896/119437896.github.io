@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Services</title>
+		<script type="text/javascript">
+    
+    </script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body style="background-color:cream;">
+	<body>
+	<style>
+		div.a{
+		text-align: center;
+		}
+	</style>
+		<div class="a">
+			<h1> Services </h1>
+		</div>
+		
+		<div class="topnav">
+		
+			<a href="index.html">Home</a>
+			<a href="cv.html">Curriculum Vitae</a>
+			<a href="interests.html">Interests</a>
+			<a href="consultancy.html">Consulting Firm</a>
+			<a href="Ebus1.html">Services</a>
+			
+			
+			
+			
+			
+		</div>
+		</br>
+		<center>
+		<h2>Make a purchase</h2>
+		
+		
+		<p style="font-size:120;">
+		We here at Click4Consultancy would like to offer you the chance to avail of our expertise and renowned consulting services.</br>
+		Here you have the option of selting consultancy in relation to either hyperautomation, multiexperience or distributed cloud.</br>
+		Also if you book online you get an extra 5% discount off the subtotal, so why wait?
+		</p>
+		
+		
+  <p>Select a Consulting Service:</p>
+
+<form action="/action_page.php">
+  <input type="radio" name="service" onclick="calcSub(this.value)" value="200">Hyperautomataion<br>
+  <input type="radio" name="service" onclick="calcSub(this.value)" value="500">Multiexperience<br>
+  <input type="radio" name="service" onclick="calcSub(this.value)" value="1000">Distributed cloud<br>
+  </br>
+  
+  Subtotal <input type="number" id="parmsubTotal" readonly="readonly">
+  </br>
+  Discount @ 5% <input type="number" id="parmdiscountAmt" readonly="readonly">
+  </br>
+  Total before tax <input type="number" id="result5" readonly="readonly">
+  </br>
+  VAT @ 20% <input type="number" id="parmvatAmt" readonly="readonly" >
+  </br>
+  Total <input type="number" id="parmtotalPrice " readonly="readonly" >
+  
+</form>
+
+<script>
+function calcSub(service) {
+  document.getElementById("parmsubTotal").value = service;
+
+  document.getElementById("parmdiscountAmt").value = service*0.05;
+  
+  document.getElementById("result5").value = service*0.95;
+
+  document.getElementById("parmvatAmt").value = service*0.19;
+
+  document.getElementById("parmtotalPrice ").value = service*1.14;
+}
+</script>
+		
+		
+		<a href ="Ebus1.html"><button class = "btn btn-success">Clear</button></a>
+	</body>
+</html>
